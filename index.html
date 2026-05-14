@@ -395,6 +395,7 @@
       font-size: 13px;
       line-height: 1.4;
       flex: 1;
+      padding-right: 12px;
     }
 
     .price-val {
@@ -622,94 +623,94 @@
   </footer>
 
   <script>
-    // Base de dados com informações atualizadas sem "fio" e listando todos os tamanhos / preços independentemente
+    // Base de dados de produtos, agora combinando Variações e Tamanhos diretamente nos preços.
     const products = [
       // --- PREMIUM ---
       {
         name: "Anzol A1 Kisu Premium Quimipoint",
         category: "premium", premium: true, quimipoint: true,
-        sizePrices: [ { sizes: "2.5 / 4 / 5 / 6 / 7 / 8", price: "R$ 24,00" } ], 
-        type: "Pata", weight: "24mg",
+        sizePrices: [ { sizes: "Pata (Tam. 2.5, 4, 5, 6, 7, 8)", price: "R$ 24,00" } ], 
+        weight: "24mg",
         link: "https://chumbadas.com.br/products/anzol-a1-kisu-premium-quimipoint-pct-com-15",
         image: "https://cdn.shopify.com/s/files/1/0454/5845/6736/files/a1-kisu-prod.jpg?v=1765978068"
       },
       {
         name: "Anzol A5 Kisu Premium Quimipoint",
         category: "premium", premium: true, quimipoint: true,
-        sizePrices: [ { sizes: "4 / 5 / 6 / 7 / 8 / 9 / 10", price: "R$ 24,00" } ],
-        type: "Pata", weight: "15mg",
+        sizePrices: [ { sizes: "Pata (Tam. 4, 5, 6, 7, 8, 9, 10)", price: "R$ 24,00" } ],
+        weight: "15mg",
         link: "https://chumbadas.com.br/products/anzol-a5-kisu-premium-quimipoint-pacote-com-15",
         image: "https://cdn.shopify.com/s/files/1/0454/5845/6736/files/a5-kisu-prod.jpg?v=1765977548"
       },
       {
         name: "Anzol A4 Kisu Premium Quimipoint",
         category: "premium", premium: true, quimipoint: true,
-        sizePrices: [ { sizes: "4 / 5 / 6 / 7 / 8", price: "R$ 24,00" } ],
-        type: "Pata", weight: "9mg",
+        sizePrices: [ { sizes: "Pata (Tam. 4, 5, 6, 7, 8)", price: "R$ 24,00" } ],
+        weight: "9mg",
         link: "https://chumbadas.com.br/products/anzol-a4-kisu-premium-quimipoint-pct-com-15",
         image: "https://cdn.shopify.com/s/files/1/0454/5845/6736/files/a4-kisu-prod.jpg?v=1765976966"
       },
       {
         name: "Anzol First Kisu Premium",
         category: "premium", premium: true, quimipoint: false,
-        sizePrices: [ { sizes: "5 / 6 / 7 / 8", price: "R$ 24,00" } ],
-        type: "Pata", weight: "14mg",
+        sizePrices: [ { sizes: "Pata (Tam. 5, 6, 7, 8)", price: "R$ 24,00" } ],
+        weight: "14mg",
         link: "https://chumbadas.com.br/products/anzol-first-kisu-premium-quimipoint-pct-com-15",
         image: "https://cdn.shopify.com/s/files/1/0454/5845/6736/files/first-kisu-prod.jpg?v=1765978477"
       },
       {
         name: "Anzol Akita Kitsune Premium Quimipoint",
         category: "premium", premium: true, quimipoint: true,
-        sizePrices: [ { sizes: "2.5 / 3 / 4 / 5", price: "R$ 24,00" } ],
-        type: "Pata", weight: "9mg",
+        sizePrices: [ { sizes: "Pata (Tam. 2.5, 3, 4, 5)", price: "R$ 24,00" } ],
+        weight: "9mg",
         link: "https://chumbadas.com.br/products/anzol-akita-kitsune-premium-quimipoint",
         image: "https://cdn.shopify.com/s/files/1/0454/5845/6736/files/akita-kitsune-prod.jpg?v=1765979240"
       },
       {
         name: "Anzol Kisu Libero Premium Quimipoint",
         category: "premium", premium: true, quimipoint: true,
-        sizePrices: [ { sizes: "4 / 5 / 6 / 7 / 8", price: "R$ 24,00" } ],
-        type: "Pata", weight: "6mg",
+        sizePrices: [ { sizes: "Pata (Tam. 4, 5, 6, 7, 8)", price: "R$ 24,00" } ],
+        weight: "6mg",
         link: "https://chumbadas.com.br/products/anzol-kisu-libero-premium-quimipoint-pct-com-15",
         image: "https://cdn.shopify.com/s/files/1/0454/5845/6736/files/atleta-kisu-prod.jpg?v=1765978727"
       },
       {
         name: "Anzol Yamame Premium Quimipoint",
         category: "premium", premium: true, quimipoint: true,
-        sizePrices: [ { sizes: "3 / 4 / 5 / 6 / 7 / 8", price: "R$ 24,00" } ],
-        type: "Pata", weight: "11mg",
+        sizePrices: [ { sizes: "Pata (Tam. 3, 4, 5, 6, 7, 8)", price: "R$ 24,00" } ],
+        weight: "11mg",
         link: "https://chumbadas.com.br/products/anzol-yamame-premium-quimipoint-pct-com-15-copia",
         image: "https://cdn.shopify.com/s/files/1/0454/5845/6736/files/yamame-prod.jpg?v=1765978276"
       },
       {
         name: "Anzol Aji Sendou Premium",
         category: "premium", premium: true, quimipoint: false,
-        sizePrices: [ { sizes: "9 / 10 / 11", price: "R$ 24,00" } ],
-        type: "Pata", weight: "56mg",
+        sizePrices: [ { sizes: "Pata (Tam. 9, 10, 11)", price: "R$ 24,00" } ],
+        weight: "56mg",
         link: "https://chumbadas.com.br/products/anzol-aji-sendou-premium-pct-com-15",
         image: "https://cdn.shopify.com/s/files/1/0454/5845/6736/files/aji-sendou-prod.jpg?v=1765976176"
       },
       {
         name: "Anzol Atleta Kisu Premium Quimipoint",
         category: "premium", premium: true, quimipoint: true,
-        sizePrices: [ { sizes: "4 / 5 / 6 / 7 / 8 / 9", price: "R$ 24,00" } ],
-        type: "Pata", weight: "9mg",
+        sizePrices: [ { sizes: "Pata (Tam. 4, 5, 6, 7, 8, 9)", price: "R$ 24,00" } ],
+        weight: "9mg",
         link: "https://chumbadas.com.br/products/anzol-kisu-libero-premium-quimipoint-pct-com-15-copia",
         image: "https://cdn.shopify.com/s/files/1/0454/5845/6736/files/atleta-kisu-prod.jpg?v=1765978727"
       },
       {
         name: "Anzol Fune Karei Premium Quimipoint",
         category: "premium", premium: true, quimipoint: true,
-        sizePrices: [ { sizes: "11 / 13 / 14 / 15", price: "R$ 24,00" } ],
-        type: "Pata", weight: "72mg",
+        sizePrices: [ { sizes: "Pata (Tam. 11, 13, 14, 15)", price: "R$ 24,00" } ],
+        weight: "72mg",
         link: "https://chumbadas.com.br/products/anzol-fune-karei-premium-quimipoint-pct-com-15",
         image: "https://cdn.shopify.com/s/files/1/0454/5845/6736/files/fune-karei-prod.jpg?v=1765975803"
       },
       {
         name: "Anzol Akita Sode Premium",
         category: "premium", premium: true, quimipoint: false,
-        sizePrices: [ { sizes: "2 / 4 / 6 / 8 / 10 / 12", price: "R$ 27,55" } ],
-        type: "Pata", weight: "-",
+        sizePrices: [ { sizes: "Pata (Tam. 2, 4, 6, 8, 10, 12)", price: "R$ 27,55" } ],
+        weight: "-",
         link: "https://chumbadas.com.br/products/anzol-sode-premium-pct-com-15",
         image: "https://cdn.shopify.com/s/files/1/0454/5845/6736/files/Akita-Sode-10-embalagem_e0ed1704-4a0f-4c60-8cef-037e9a19dbe8.png?v=1731423960"
       },
@@ -718,32 +719,32 @@
       {
         name: "Anzol 53117",
         category: "padrao", premium: false, quimipoint: false,
-        sizePrices: [ { sizes: "3 / 4 / 5 / 6 / 7 / 8 / 9", price: "R$ 9,10" } ],
-        type: "Olhal", weight: "",
+        sizePrices: [ { sizes: "Olhal (Tam. 3, 4, 5, 6, 7, 8, 9)", price: "R$ 9,10" } ],
+        weight: "",
         link: "https://chumbadas.com.br/products/anzol-53117",
         image: "https://cdn.shopify.com/s/files/1/0454/5845/6736/files/Anzol-53117-Olhal-4-Niquel.png?v=1731423749"
       },
       {
         name: "Anzol 50656",
         category: "padrao", premium: false, quimipoint: false,
-        sizePrices: [ { sizes: "3 / 4 / 5 / 6 / 7 / 8 / 9 / 10 / 11", price: "R$ 9,10" } ],
-        type: "Olhal", weight: "",
+        sizePrices: [ { sizes: "Olhal (Tam. 3, 4, 5, 6, 7, 8, 9, 10, 11)", price: "R$ 9,10" } ],
+        weight: "",
         link: "https://chumbadas.com.br/products/anzol-50656",
         image: "https://cdn.shopify.com/s/files/1/0454/5845/6736/files/Anzol-50656-Olhal-3-Niquel.png?v=1731423733"
       },
       {
         name: "Anzol 50457",
         category: "padrao", premium: false, quimipoint: false,
-        sizePrices: [ { sizes: "6 / 7 / 8 / 9 / 10 / 12", price: "R$ 9,80" } ],
-        type: "Olhal", weight: "",
+        sizePrices: [ { sizes: "Olhal (Tam. 6, 7, 8, 9, 10, 12)", price: "R$ 9,10" } ],
+        weight: "",
         link: "https://chumbadas.com.br/products/anzol-50457",
         image: "https://cdn.shopify.com/s/files/1/0454/5845/6736/files/Anzol-50457-Olhal-6-Niquel.png?v=1731423709"
       },
       {
         name: "Anzol Akitasune",
         category: "padrao", premium: false, quimipoint: false,
-        sizePrices: [ { sizes: "4 / 5 / 6", price: "R$ 9,10" } ],
-        type: "Pata", weight: "",
+        sizePrices: [ { sizes: "Pata (Tam. 4, 5, 6)", price: "R$ 9,10" } ],
+        weight: "",
         link: "https://chumbadas.com.br/products/anzol-akitasune",
         image: "https://cdn.shopify.com/s/files/1/0454/5845/6736/files/Anzol-Akitasune.png?v=1731423759"
       },
@@ -751,10 +752,10 @@
         name: "Anzol Chinu",
         category: "padrao", premium: false, quimipoint: false,
         sizePrices: [ 
-          { sizes: "0,5 / 0,8 / 1 / 2 / 3 / 4 / 5 / 6 / 7 / 8", price: "R$ 9,10" },
-          { sizes: "9 / 10 / 11 / 12", price: "R$ 9,40" }
+          { sizes: "Olhal / Pata (Tam. 0,5, 0,8, 1, 2, 3, 4, 5, 6, 7, 8)", price: "R$ 9,10" },
+          { sizes: "Olhal / Pata (Tam. 9, 10, 11, 12)", price: "R$ 9,40" }
         ],
-        type: "Olhal / Pata", weight: "",
+        weight: "",
         link: "https://chumbadas.com.br/products/anzol-chinu",
         image: "https://cdn.shopify.com/s/files/1/0454/5845/6736/files/Anzol-Chinu.png?v=1731423791"
       },
@@ -762,9 +763,9 @@
         name: "Anzol Iseama",
         category: "padrao", premium: false, quimipoint: false,
         sizePrices: [
-          { sizes: "5 / 6 / 7 / 8 / 9 / 10 / 11 / 12", price: "R$ 9,10" }
+          { sizes: "Olhal (Tam. 5, 6, 7, 8, 9, 10, 11, 12)", price: "R$ 9,10" }
         ],
-        type: "Olhal", weight: "",
+        weight: "",
         link: "https://chumbadas.com.br/products/anzol-iseama",
         image: "https://cdn.shopify.com/s/files/1/0454/5845/6736/files/isaema.png?v=1731423818"
       },
@@ -772,26 +773,26 @@
         name: "Anzol Izumezina",
         category: "padrao", premium: false, quimipoint: false,
         sizePrices: [ 
-          { sizes: "8 / 9 / 11 / 12", price: "R$ 8,40" },
-          { sizes: "10", price: "R$ 8,40" } /* Note: both have the same price in the image, keeping consistent with image data which shows R$ 8,40 for Pata and R$ 9,10 for Olhal across all sizes. Grouping by Olhal and Pata is clearer here. */
+          { sizes: "Olhal (Tam. 8, 9, 11, 12)", price: "R$ 9,10" },
+          { sizes: "Pata (Tam. 8, 9, 10, 11, 12)", price: "R$ 8,40" } 
         ],
-        type: "Olhal (R$ 9,10) / Pata (R$ 8,40)", weight: "",
+        weight: "",
         link: "https://chumbadas.com.br/products/anzol-izumezina",
         image: "https://cdn.shopify.com/s/files/1/0454/5845/6736/files/izumezina.png?v=1731423839"
       },
       {
         name: "Anzol Keiryu",
         category: "padrao", premium: false, quimipoint: false,
-        sizePrices: [ { sizes: "9 / 10", price: "R$ 9,10" } ],
-        type: "Pata", weight: "",
+        sizePrices: [ { sizes: "Pata (Tam. 9, 10)", price: "R$ 9,10" } ],
+        weight: "",
         link: "https://chumbadas.com.br/products/anzol-keiryu",
         image: "https://cdn.shopify.com/s/files/1/0454/5845/6736/files/keiryu.png?v=1778611117"
       },
       {
         name: "Anzol Kitsune",
         category: "padrao", premium: false, quimipoint: false,
-        sizePrices: [ { sizes: "1 / 6 / 7 / 9 / 10", price: "R$ 9,10" } ],
-        type: "Pata", weight: "",
+        sizePrices: [ { sizes: "Pata (Tam. 1, 6, 7, 9, 10)", price: "R$ 9,10" } ],
+        weight: "",
         link: "https://chumbadas.com.br/products/anzol-kitsune",
         image: "https://cdn.shopify.com/s/files/1/0454/5845/6736/files/kitsune.png?v=1731423861"
       },
@@ -799,27 +800,27 @@
         name: "Anzol Maruseigo",
         category: "padrao", premium: false, quimipoint: false,
         sizePrices: [
-          { sizes: "8 / 9 / 11 / 12 / 13 / 14 / 16 / 17", price: "R$ 9,10" },
-          { sizes: "10", price: "R$ 9,80" },
-          { sizes: "18", price: "R$ 10,50" }
+          { sizes: "Olhal / Pata (Tam. 8, 9, 11, 12, 13, 14, 15, 16, 17)", price: "R$ 9,10" },
+          { sizes: "Olhal / Pata (Tam. 10)", price: "R$ 9,80" },
+          { sizes: "Olhal / Pata (Tam. 18)", price: "R$ 10,50" }
         ],
-        type: "Olhal / Pata", weight: "",
+        weight: "",
         link: "https://chumbadas.com.br/products/anzol-maruseigo",
         image: "https://cdn.shopify.com/s/files/1/0454/5845/6736/files/maruseigo_84d4fddf-0e36-44b4-a205-3da206651469.png?v=1731423905"
       },
       {
         name: "Anzol Maruseigo XC",
         category: "padrao", premium: false, quimipoint: false,
-        sizePrices: [ { sizes: "12 / 14 / 16", price: "R$ 11,20" } ],
-        type: "Pata", weight: "",
+        sizePrices: [ { sizes: "Pata (Tam. 12, 14, 16)", price: "R$ 11,20" } ],
+        weight: "",
         link: "https://chumbadas.com.br/products/anzol-maruseigo-xc",
         image: "https://cdn.shopify.com/s/files/1/0454/5845/6736/files/maruseigo-xc.png?v=1731423917"
       },
       {
         name: "Anzol Sode",
         category: "padrao", premium: false, quimipoint: false,
-        sizePrices: [ { sizes: "5 / 6 / 7 / 8 / 9 / 10", price: "R$ 8,40" } ],
-        type: "Pata", weight: "",
+        sizePrices: [ { sizes: "Pata (Tam. 5, 6, 7, 8, 9, 10)", price: "R$ 8,40" } ],
+        weight: "",
         link: "https://chumbadas.com.br/products/anzol-sode",
         image: "https://cdn.shopify.com/s/files/1/0454/5845/6736/files/sode.png?v=1731431010"
       }
@@ -848,10 +849,10 @@
          </div>`
       ).join("");
 
-      // Geração dos detalhes extras da variação e peso (se aplicável)
-      let extraSpecsHTML = `<div class="extra-spec"><span>Variação</span> <strong>${product.type}</strong></div>`;
+      // Geração dos detalhes extras do peso (se aplicável)
+      let extraSpecsHTML = "";
       if (product.weight && product.weight !== "-") {
-        extraSpecsHTML += `<div class="extra-spec"><span>Peso</span> <strong>${product.weight}</strong></div>`;
+        extraSpecsHTML += `<div class="extra-spec"><span>Peso Médio</span> <strong>${product.weight}</strong></div>`;
       }
 
       const article = document.createElement("article");
@@ -867,7 +868,7 @@
           
           <div class="specs">
             <div class="sizes-header">
-              <span>Tamanhos</span>
+              <span>Opções (Tamanho & Modelo)</span>
               <span>Preço</span>
             </div>
             ${sizePriceHTML}
