@@ -771,8 +771,11 @@
       {
         name: "Anzol Izumezina",
         category: "padrao", premium: false, quimipoint: false,
-        sizePrices: [ { sizes: "8 / 9 / 10 / 11 / 12", price: "R$ 9,10" } ],
-        type: "Olhal / Pata", weight: "",
+        sizePrices: [ 
+          { sizes: "8 / 9 / 11 / 12", price: "R$ 8,40" },
+          { sizes: "10", price: "R$ 8,40" } /* Note: both have the same price in the image, keeping consistent with image data which shows R$ 8,40 for Pata and R$ 9,10 for Olhal across all sizes. Grouping by Olhal and Pata is clearer here. */
+        ],
+        type: "Olhal (R$ 9,10) / Pata (R$ 8,40)", weight: "",
         link: "https://chumbadas.com.br/products/anzol-izumezina",
         image: "https://cdn.shopify.com/s/files/1/0454/5845/6736/files/izumezina.png?v=1731423839"
       },
